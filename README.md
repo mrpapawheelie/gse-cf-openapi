@@ -61,7 +61,7 @@ npx wrangler deploy
 ```
 
 #### Visit the URL given to you in command line once it's deployed to view the OpenAPI swagger tool.
-#### Confirm your search workings by testing it out.
+#### test it out from page. 
 
 ## Creating a GPT with your New API Interactive How-to Demo
 [Watch Now](https://app.arcade.software/share/tZ8NPMNwzkbG6V3bXS9p)
