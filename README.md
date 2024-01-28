@@ -4,6 +4,8 @@ This Cloudflare Worker leverages OpenAPI 3.1 and [itty-router-openapi](https://g
 
 By automatically generating the `openapi.json` schema from your code and validating incoming requests against defined parameters, this project simplifies the process of creating an OpenAPI-compliant interface for web search functionalities. Whether you're building an internal tool or a customer-facing application, this worker provides a robust foundation for your search-related features.
 
+[Demo](https://wagmi.cooks.dev)
+
 ## Get started
 
 1. Sign up for [Cloudflare Workers](https://workers.dev). The free tier is sufficient for most use cases.
