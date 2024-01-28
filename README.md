@@ -35,8 +35,8 @@ pnpm install
 ```
 
 ## Update Info
-- Update the contact info to your information at src/index.ts
-- Update the server url to your Cloudflare url after deploying in src/index.ts
+#### Update the contact info to your information at src/index.ts
+#### Update the server url to your Cloudflare url after deploying in src/index.ts
 
 - Authenticate Cloudflare 
 ```bash
