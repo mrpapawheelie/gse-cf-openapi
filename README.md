@@ -1,25 +1,50 @@
-# Cloudflare Workers OpenAPI 3.1
+# Cloudflare Worker for Google Programmable Search
 
-This is a Cloudflare Worker with OpenAPI 3.1 using [itty-router-openapi](https://github.com/cloudflare/itty-router-openapi).
+This Cloudflare Worker leverages OpenAPI 3.1 and [itty-router-openapi](https://github.com/cloudflare/itty-router-openapi) to create a powerful and efficient interface for Google Programmable Search. Designed for rapid development and deployment, this example project serves as an ideal starting point for developers looking to integrate Google's search capabilities into their applications with the scalability and reliability of Cloudflare Workers.
 
-This is an example project made to be used as a quick start into building OpenAPI compliant Workers that generates the
-`openapi.json` schema automatically from code and validates the incoming request to the defined parameters or request body.
+By automatically generating the `openapi.json` schema from your code and validating incoming requests against defined parameters, this project simplifies the process of creating an OpenAPI-compliant interface for web search functionalities. Whether you're building an internal tool or a customer-facing application, this worker provides a robust foundation for your search-related features.
 
 ## Get started
 
-1. Sign up for [Cloudflare Workers](https://workers.dev). The free tier is more than enough for most use cases.
-2. Clone this project and install dependencies with `npm install`
-3. Run `wrangler login` to login to your Cloudflare account in wrangler
-4. Run `wrangler deploy` to publish the API to Cloudflare Workers
+1. Sign up for [Cloudflare Workers](https://workers.dev). The free tier is sufficient for most use cases.
+2. Clone this project.
+3. Install dependencies:
 
-## Project structure
+# Installation Instructions
 
-1. Your main router is defined in `src/index.ts`.
-2. Each endpoint has its own file in `src/endpoints/`.
-3. For more information read the [itty-router-openapi official documentation](https://cloudflare.github.io/itty-router-openapi/).
+Choose one of the following package managers to install dependencies:
 
-## Development
+### Yarn
+`yarn`
 
-1. Run `wrangler dev` to start a local instance of the API.
-2. Open `http://localhost:9000/` in your browser to see the Swagger interface where you can try the endpoints.
-3. Changes made in the `src/` folder will automatically trigger the server to reload, you only need to refresh the Swagger interface.
+### Bun
+`bun install`
+
+### NPM
+`npm install`
+
+### PNPM
+`pnpm install`
+
+### Update Info
+- Update the contact info to your information at src/index.ts
+- Update the server url to your Cloudflare url after deploying in src/index.ts
+
+4. Run `npx wrangler login` from your project root.
+5. Setup a Google Programmable Search at: [https://programmablesearchengine.google.com/](https://programmablesearchengine.google.com/)
+6. Get your Google Programmable Search ID from the overview page and run `npx wrangler secret put SEARCH_ENGINE_ID`.
+7. Get an API Key from Google for GSE at: [https://developers.google.com/custom-search/v1/introduction](https://developers.google.com/custom-search/v1/introduction) and run `npx wrangler secret put GSE_API_KEY`.
+8. Run `npx wrangler deploy` to deploy it.
+9. Visit the URL to view the OpenAPI testing tool.
+
+## Creating a GPT
+- Once your API is on cloudflare and you've tested it works by visiting the main url, click on the openai.json link (format should be cloudflaredomain/openapi.json)
+- Open up ChatGPT, and go to Explore GPTs on left and click Create at the top right.
+- Click configure and scroll down, choose what capabilities you want, then click create new action.
+- Click import from URL, and paste in your openapi.json url, for GPT to automatically import. 
+- make sure you link to a privacy policy page. 
+- Then click the back arrow and click create to instruct GPT on the setup.
+
+### How-to Video
+[https://app.arcade.software/share/tZ8NPMNwzkbG6V3bXS9p](https://app.arcade.software/share/tZ8NPMNwzkbG6V3bXS9p)
+

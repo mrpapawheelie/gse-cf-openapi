@@ -1,3 +1,3 @@
-name = "next-gpt"
+name = "gse-cf-openapi"
 main = "src/index.ts"
 compatibility_date = "2024-01-17"

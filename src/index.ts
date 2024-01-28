@@ -1,29 +1,37 @@
 import { OpenAPIRouter } from "@cloudflare/itty-router-openapi";
-import { TaskCreate } from "./endpoints/taskCreate";
-import { TaskDelete } from "./endpoints/taskDelete";
-import { TaskFetch } from "./endpoints/taskFetch";
-import { TaskList } from "./endpoints/taskList";
+import { GetSearch } from "./search";
 
 export const router = OpenAPIRouter({
-	docs_url: "/",
-});
+	schema: {
+		info: {
+			title: 'Google Search API',
+			description: 'A plugin that allows the user to search the web using Google Programmable Search Engine through ChatGPT',
+			version: '0.0.1',
+		},
+		servers: [
+			{
+			  url: "https://wagmi.cooks.dev",
+			  description: "Main API server",
+			},
+		],
+	},
+	docs_url: '/',
+	aiPlugin: {
+		name_for_human: 'Google Web Search',
+		name_for_model: 'google_web_search',
+		description_for_human: "Google Web Search plugin for ChatGPT.",
+		description_for_model: "You can search the web using Google Programmable Search Engine with this plugin.",
+		contact_email: 'papa@cooks.dev',
+		legal_info_url: 'https://terms.cooks.dev/',
+		logo_url: 'https://cdn.cooks.dev/assets/cooks-dev-icon.jpg',
+	},
+})
 
-router.get("/api/tasks/", TaskList);
-router.post("/api/tasks/", TaskCreate);
-router.get("/api/tasks/:taskSlug/", TaskFetch);
-router.delete("/api/tasks/:taskSlug/", TaskDelete);
+router.get('/search', GetSearch) // Use your Google Search function here
 
 // 404 for everything else
-router.all("*", () =>
-	Response.json(
-		{
-			success: false,
-			error: "Route not found",
-		},
-		{ status: 404 }
-	)
-);
+router.all('*', () => new Response('Not Found.', { status: 404 }))
 
 export default {
-	fetch: router.handle,
-};
+	fetch: router.handle
+}

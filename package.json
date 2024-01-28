@@ -1,5 +1,6 @@
 {
-  "name": "cloudflare-workers-openapi",
+  "name": "gse-cf-openapi",
+  "description": "A Cloudflare Worker using Google Programmable Search API and analyzing the results via a OpenAI GPT",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -12,8 +13,6 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240117.0",
-    "@types/node": "^20.5.7",
-    "@types/service-worker-mock": "^2.0.1",
     "wrangler": "^3.0.0"
   }
 }
