@@ -38,34 +38,28 @@ pnpm install
 #### Update the contact info to your information at src/index.ts
 #### Update the server url to your Cloudflare url after deploying in src/index.ts
 
-- Authenticate Cloudflare 
+## Local Development
+#### Authenticate Cloudflare 
 ```bash
 npx wrangler login
 ```
-- Setup a Google Programmable Search at: [https://programmablesearchengine.google.com/](https://programmablesearchengine.google.com/)
-- Get your Google Programmable Search ID from the overview page and run
+### Store Secrets
+#### Setup a Google Programmable Search at: [https://programmablesearchengine.google.com/](https://programmablesearchengine.google.com/)
+#### Get your Google Programmable Search ID from the overview page
 ```bash
 npx wrangler secret put SEARCH_ENGINE_ID
 ```
-- Get an API Key from Google for GSE at: [https://developers.google.com/custom-search/v1/introduction](https://developers.google.com/custom-search/v1/introduction) and run
+#### Get an API Key from Google for GSE at: [https://developers.google.com/custom-search/v1/introduction](https://developers.google.com/custom-search/v1/introduction) and run
 ```bash
 npx wrangler secret put GSE_API_KEY
 ```
-- Ship It! 
+## Ship It! 
 ```bash
 npx wrangler deploy
 ```
-to deploy it.
-- Visit the URL to view the OpenAPI testing tool.
 
-## Creating a GPT
-- Once your API is on cloudflare and you've tested it works by visiting the main url, click on the openai.json link (format should be cloudflaredomain/openapi.json)
-- Open up ChatGPT, and go to Explore GPTs on left and click Create at the top right.
-- Click configure and scroll down, choose what capabilities you want, then click create new action.
-- Click import from URL, and paste in your openapi.json url, for GPT to automatically import. 
-- make sure you link to a privacy policy page. 
-- Then click the back arrow and click create to instruct GPT on the setup.
+#### Visit the URL given to you in command line once it's deployed to view the OpenAPI swagger tool.
+#### Confirm your search workings by testing it out.
 
-### How-to Video
-[https://app.arcade.software/share/tZ8NPMNwzkbG6V3bXS9p](https://app.arcade.software/share/tZ8NPMNwzkbG6V3bXS9p)
-
+## Creating a GPT with your New API Interactive How-to Demo
+[Watch Now](https://app.arcade.software/share/tZ8NPMNwzkbG6V3bXS9p)
