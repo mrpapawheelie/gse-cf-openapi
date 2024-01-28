@@ -15,10 +15,14 @@ By automatically generating the `openapi.json` schema from your code and validat
 Choose one of the following package managers to install dependencies:
 
 ### Yarn
-`yarn`
+```bash
+yarn
+```
 
 ### Bun
-`bun install`
+```bash
+bun install
+```
 
 ### NPM
 `npm install`
