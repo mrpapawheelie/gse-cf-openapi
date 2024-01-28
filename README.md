@@ -25,21 +25,38 @@ bun install
 ```
 
 ### NPM
-`npm install`
+```bash
+npm install
+```
 
 ### PNPM
-`pnpm install`
+```bash
+pnpm install
+```
 
-### Update Info
+## Update Info
 - Update the contact info to your information at src/index.ts
 - Update the server url to your Cloudflare url after deploying in src/index.ts
 
-4. Run `npx wrangler login` from your project root.
-5. Setup a Google Programmable Search at: [https://programmablesearchengine.google.com/](https://programmablesearchengine.google.com/)
-6. Get your Google Programmable Search ID from the overview page and run `npx wrangler secret put SEARCH_ENGINE_ID`.
-7. Get an API Key from Google for GSE at: [https://developers.google.com/custom-search/v1/introduction](https://developers.google.com/custom-search/v1/introduction) and run `npx wrangler secret put GSE_API_KEY`.
-8. Run `npx wrangler deploy` to deploy it.
-9. Visit the URL to view the OpenAPI testing tool.
+- Authenticate Cloudflare 
+```bash
+npx wrangler login
+```
+- Setup a Google Programmable Search at: [https://programmablesearchengine.google.com/](https://programmablesearchengine.google.com/)
+- Get your Google Programmable Search ID from the overview page and run
+```bash
+npx wrangler secret put SEARCH_ENGINE_ID
+```
+- Get an API Key from Google for GSE at: [https://developers.google.com/custom-search/v1/introduction](https://developers.google.com/custom-search/v1/introduction) and run
+```bash
+npx wrangler secret put GSE_API_KEY
+```
+- Ship It! 
+```bash
+npx wrangler deploy
+```
+to deploy it.
+- Visit the URL to view the OpenAPI testing tool.
 
 ## Creating a GPT
 - Once your API is on cloudflare and you've tested it works by visiting the main url, click on the openai.json link (format should be cloudflaredomain/openapi.json)
