@@ -1,6 +1,10 @@
-# Cloudflare Worker for Google Programmable Search
+# Custom Google Search API for your own ChatGPT
 
-This Cloudflare Worker leverages OpenAPI 3.1 and [itty-router-openapi](https://github.com/cloudflare/itty-router-openapi) to create a powerful and efficient interface for Google Programmable Search. Designed for rapid development and deployment, this example project serves as an ideal starting point for developers looking to integrate Google's search capabilities into their applications with the scalability and reliability of Cloudflare Workers.
+*Disclaimer: Although most of this setup is free, you need a premium ChatGPT account to create the plugin as far as I know. This may change in the future, so double check*
+
+This Cloudflare Worker leverages OpenAPI 3.1 and [itty-router-openapi](https://github.com/cloudflare/itty-router-openapi) to create a powerful and efficient interface for Google Programmable Search designed to work with your own custom GPT action. Designed for rapid development and deployment, this example project serves as an ideal starting point for developers looking to integrate Google's search capabilities into their applications with the scalability and reliability of Cloudflare Workers.
+
+The openapi and swagger docs give you the freedom to use this functionality in whatever app you choose, not just GPT.
 
 By automatically generating the `openapi.json` schema from your code and validating incoming requests against defined parameters, this project simplifies the process of creating an OpenAPI-compliant interface for web search functionalities. Whether you're building an internal tool or a customer-facing application, this worker provides a robust foundation for your search-related features.
 
